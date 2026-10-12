@@ -91,15 +91,11 @@
               </p>
             </div>
           </div>
-          <div class="empty-panel">
-            <span class="status">No featured products right now</span>
-            <h3>No featured products at the moment.</h3>
-            <p>
-              Nothing is featured today. Explore the complete Zaytro masala
-              range below, or contact us for a recommendation.
-            </p>
-            <a class="text-link" href="#all-products">See all masalas →</a>
-          </div>
+          <div
+            class="product-grid"
+            data-featured-products
+            aria-live="polite"
+          ></div>
         </div>
       </section>
 
@@ -117,21 +113,11 @@
               </h2>
             </div>
           </div>
-          <div class="empty-panel">
-            <span class="status">No active offers</span>
-            <h3>There are no current offers.</h3>
-            <p>
-              We'll share details when an offer is available. For now, ask us
-              for today's product prices and stock.
-            </p>
-            <a
-              class="text-link"
-              href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20current%20product%20prices%20and%20availability."
-              target="_blank"
-              rel="noopener noreferrer"
-              >Ask for prices and availability →</a
-            >
-          </div>
+          <div
+            class="product-grid"
+            data-offer-products
+            aria-live="polite"
+          ></div>
         </div>
       </section>
 
@@ -148,169 +134,83 @@
                 Find your everyday favourite.
               </h2>
               <p class="section-intro">
-                Product imagery is shown for reference. Please confirm pack
-                size, ingredients and availability with us before ordering.
+                Choose a pack size to view its product image. Larger-pack photos
+                are representative; please confirm pack details and availability
+                with us before ordering.
               </p>
             </div>
           </div>
-          <div class="product-grid">
-            <article class="product-card" id="meat-masala">
-              <img
-                class="product-image"
-                src="public/prod_images/meat-pd.jpeg"
-                alt="Zaytro Meat Masala product pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <span class="status">Meat & curry</span>
-                <h3 class="card-title">Meat Masala</h3>
-                <p>
-                  A warming blend for meat and curry recipes. Confirmed pack
-                  size: 50g.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20the%20price%20and%20availability%20of%20Meat%20Masala."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ask about Meat Masala →</a
-                >
-              </div>
-            </article>
-            <article class="product-card" id="chicken-masala">
-              <img
-                class="product-image"
-                src="public/prod_images/chicken-pd.jpeg"
-                alt="Zaytro Chicken Masala product pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <span class="status">Meat & curry</span>
-                <h3 class="card-title">Chicken Masala</h3>
-                <p>
-                  A familiar spice blend for chicken dishes. Ask us for pack
-                  size and ingredient details.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20the%20price%20and%20availability%20of%20Chicken%20Masala."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ask about Chicken Masala →</a
-                >
-              </div>
-            </article>
-            <article class="product-card" id="garam-masala">
-              <img
-                class="product-image"
-                src="public/prod_images/garam-pd.jpeg"
-                alt="Zaytro Garam Masala product pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <span class="status">Kitchen staple</span>
-                <h3 class="card-title">Garam Masala</h3>
-                <p>
-                  A finishing masala for curries, dals and everyday home
-                  cooking. Ask for pack details.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20the%20price%20and%20availability%20of%20Garam%20Masala."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ask about Garam Masala →</a
-                >
-              </div>
-            </article>
-            <article class="product-card" id="haldi-powder">
-              <img
-                class="product-image"
-                src="public/prod_images/haldi-pd.jpeg"
-                alt="Zaytro Haldi Powder product pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <span class="status">Kitchen staple</span>
-                <h3 class="card-title">Haldi Powder</h3>
-                <p>
-                  A pantry staple for everyday recipes. Ask us to confirm pack
-                  size and ingredients.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20the%20price%20and%20availability%20of%20Haldi%20Powder."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ask about Haldi Powder →</a
-                >
-              </div>
-            </article>
-            <article class="product-card" id="lal-mirch">
-              <img
-                class="product-image"
-                src="public/prod_images/lal-mirch-pd.jpeg"
-                alt="Zaytro Lal Mirch Powder product pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <span class="status">Kitchen staple</span>
-                <h3 class="card-title">Lal Mirch Powder</h3>
-                <p>
-                  A familiar chilli powder for everyday cooking. Ask us to
-                  confirm pack details.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20the%20price%20and%20availability%20of%20Lal%20Mirch%20Powder."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ask about Lal Mirch Powder →</a
-                >
-              </div>
-            </article>
-            <article class="product-card" id="dhaniya-powder">
-              <img
-                class="product-image"
-                src="public/prod_images/dhaniya-pd.jpeg"
-                alt="Zaytro Dhaniya Powder product pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <span class="status">Kitchen staple</span>
-                <h3 class="card-title">Dhaniya Powder</h3>
-                <p>
-                  A versatile pantry staple for curries and home-style meals.
-                  Ask for pack details.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://wa.me/919580216636?text=Hi%20Zaytro%2C%20please%20share%20the%20price%20and%20availability%20of%20Dhaniya%20Powder."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Ask about Dhaniya Powder →</a
-                >
-              </div>
-            </article>
+          <div class="product-controls">
+            <div
+              class="weight-filters"
+              role="group"
+              aria-label="Filter by pack size"
+            >
+              <span class="control-label">Pack size</span>
+              <button
+                type="button"
+                data-weight-filter="50g"
+                aria-pressed="false"
+              >
+                50g
+              </button>
+              <button
+                type="button"
+                data-weight-filter="100g"
+                aria-pressed="false"
+              >
+                100g
+              </button>
+              <button
+                type="button"
+                data-weight-filter="200g"
+                aria-pressed="false"
+              >
+                200g
+              </button>
+              <button
+                type="button"
+                data-weight-filter="250g"
+                aria-pressed="false"
+              >
+                250g
+              </button>
+              <button
+                type="button"
+                data-weight-filter="500g"
+                aria-pressed="false"
+              >
+                500g
+              </button>
+              <button
+                type="button"
+                data-weight-filter="1kg"
+                aria-pressed="false"
+              >
+                1kg
+              </button>
+              <button
+                type="button"
+                data-weight-filter="all"
+                aria-pressed="true"
+              >
+                All
+              </button>
+            </div>
+            <label class="sort-control">
+              <span class="control-label">Sort</span>
+              <select data-product-sort>
+                <option value="recommended">Recommended</option>
+                <option value="name-asc">Name: A–Z</option>
+                <option value="name-desc">Name: Z–A</option>
+              </select>
+            </label>
           </div>
+          <div
+            class="product-grid"
+            data-product-list
+            aria-live="polite"
+          ></div>
         </div>
       </section>
 
@@ -409,10 +309,6 @@
         </nav>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll(".current-year").forEach((element) => {
-        element.textContent = new Date().getFullYear();
-      });
-    </script>
+    <script type="module" src="public/products-ui.js"></script>
   </body>
 </html>

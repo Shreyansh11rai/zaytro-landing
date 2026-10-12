@@ -476,6 +476,10 @@ h1 {
   animation: reveal-card 600ms ease both;
 }
 
+.product-card[hidden] {
+  display: none;
+}
+
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 32px rgba(72, 16, 16, 0.12);
@@ -483,10 +487,19 @@ h1 {
 
 .product-image {
   width: 100%;
-  height: 70%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  height: auto;
+  padding: 0.6rem;
+  object-fit: contain;
   background: #f2e8d7;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.product-image.is-changing {
+  opacity: 0.35;
+  transform: scale(0.98);
 }
 
 .product-card-body {
@@ -513,6 +526,105 @@ h1 {
   margin-top: auto;
 }
 
+.weight-options {
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.weight-options legend {
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.weight-options-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+.weight-chip,
+.weight-filters button,
+.sort-control select {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--maroon-deep);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.weight-chip,
+.weight-filters button {
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.weight-chip[aria-pressed="true"],
+.weight-filters button[aria-pressed="true"] {
+  border-color: var(--maroon);
+  background: var(--maroon);
+  color: var(--cream);
+}
+
+.weight-chip:hover,
+.weight-filters button:hover {
+  border-color: var(--maroon);
+}
+
+.product-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.weight-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.control-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.sort-control {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.sort-control select {
+  min-width: 11rem;
+  padding: 0.35rem 2rem 0.35rem 0.75rem;
+}
+
+.product-badge {
+  display: inline-block;
+  margin: 0 0.4rem 0.55rem 0;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #efe4cf;
+  color: #765718;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .status {
   display: inline-block;
   margin-bottom: 0.55rem;
@@ -525,6 +637,7 @@ h1 {
 
 .empty-panel {
   display: grid;
+  grid-column: 1 / -1;
   min-height: 170px;
   align-content: center;
   justify-items: start;
@@ -790,6 +903,23 @@ h1 {
     flex-direction: column;
     gap: 0.8rem;
     margin-bottom: 1.8rem;
+  }
+
+  .product-controls {
+    align-items: stretch;
+  }
+
+  .weight-filters {
+    align-items: flex-start;
+  }
+
+  .weight-filters .control-label {
+    flex-basis: 100%;
+  }
+
+  .sort-control,
+  .sort-control select {
+    width: 100%;
   }
 
   .editorial {

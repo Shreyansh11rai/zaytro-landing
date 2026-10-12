@@ -187,91 +187,7 @@
             </div>
             <a class="text-link" href="products.html">View all products →</a>
           </div>
-          <div class="product-grid">
-            <article class="product-card">
-              <img
-                class="product-image"
-                src="public/prod_images/meat-pd.jpeg"
-                alt="Zaytro Meat Masala pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <h3 class="card-title">Meat Masala</h3>
-                <p>
-                  Full-bodied masala for meat and curry recipes. Pack size: 50g.
-                </p>
-                <a class="text-link" href="products.html#meat-masala"
-                  >Product details →</a
-                >
-              </div>
-            </article>
-            <article class="product-card">
-              <img
-                class="product-image"
-                src="public/prod_images/chicken-pd.jpeg"
-                alt="Zaytro Chicken Masala pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <h3 class="card-title">Chicken Masala</h3>
-                <p>
-                  A familiar spice blend for chicken dishes and everyday
-                  cooking.
-                </p>
-                <a class="text-link" href="products.html#chicken-masala"
-                  >Product details →</a
-                >
-              </div>
-            </article>
-            <article class="product-card">
-              <img
-                class="product-image"
-                src="public/prod_images/garam-pd.jpeg"
-                alt="Zaytro Garam Masala pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <h3 class="card-title">Garam Masala</h3>
-                <p>
-                  A warming finishing masala for curries, dals and home-style
-                  meals.
-                </p>
-                <a class="text-link" href="products.html#garam-masala"
-                  >Product details →</a
-                >
-              </div>
-            </article>
-            <article class="product-card">
-              <img
-                class="product-image"
-                src="public/prod_images/haldi-pd.jpeg"
-                alt="Zaytro Haldi Powder pack"
-                width="640"
-                height="640"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="product-card-body">
-                <h3 class="card-title">Haldi Powder</h3>
-                <p>
-                  A kitchen staple for everyday cooking. Ask us for current pack
-                  details.
-                </p>
-                <a class="text-link" href="products.html#haldi-powder"
-                  >Product details →</a
-                >
-              </div>
-            </article>
-          </div>
+          <div class="product-grid" data-home-product-list aria-live="polite"></div>
         </div>
       </section>
 
@@ -291,15 +207,11 @@
               >Featured on products →</a
             >
           </div>
-          <div class="empty-panel">
-            <span class="status">No featured products right now</span>
-            <h3>Nothing featured just yet.</h3>
-            <p>
-              We don't have a featured product at the moment. Browse the full
-              range or ask us which masala is available for your recipe.
-            </p>
-            <a class="text-link" href="products.html">Browse all masalas →</a>
-          </div>
+          <div
+            class="product-grid"
+            data-featured-products
+            aria-live="polite"
+          ></div>
         </div>
       </section>
 
@@ -319,15 +231,11 @@
               >Offers on products →</a
             >
           </div>
-          <div class="empty-panel">
-            <span class="status">No active offers</span>
-            <h3>No offers at this time.</h3>
-            <p>
-              There are no current offers. Contact us to check product prices
-              and availability before ordering.
-            </p>
-            <a class="text-link" href="contact.html">Ask about a product →</a>
-          </div>
+          <div
+            class="product-grid"
+            data-offer-products
+            aria-live="polite"
+          ></div>
         </div>
       </section>
 
@@ -428,10 +336,6 @@
         </nav>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll(".current-year").forEach((element) => {
-        element.textContent = new Date().getFullYear();
-      });
-    </script>
+    <script type="module" src="public/products-ui.js"></script>
   </body>
 </html>
